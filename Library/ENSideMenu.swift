@@ -287,6 +287,7 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
     }
     
     private func toggleMenu (shouldOpen: Bool) {
+		outterView.userInteractionEnabled = shouldOpen
         if (shouldOpen && delegate?.sideMenuShouldOpenSideMenu?() == false) {
             return
         }
